@@ -1,10 +1,13 @@
 const express = require("express");
+// const colors = require("colors");
+const mongoose = require("mongoose");
 
 const dotenv = require("dotenv").config();
 const goalRoutes = require("./routes/goalRoutes");
 const { errorHandler } = require("./middleware/errorMiddleware");
-
 const port = process.env.PORT || 5000;
+// connectDB();
+require("./config/db");
 
 const app = express();
 
